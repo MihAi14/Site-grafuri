@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="istoric.html">Scurt Istoric</a></li>
+	  <hr>
+      <li><a href="teorie.html">Teorie</a></li>
+	   <hr>
+		<li><a href="terminologie.html">Terminologie</a></li>
+		<li><a href="grad.html">Gradul unui vârf</a></li>
+		<li><a href="reprezentare.html">Reprezentarea grafurilor neorientate</a></li>
+		<li><a href="partial.html">Graf parțial. Subgraf. Graf complementar</a></li>
+		<li><a href="complet.html">Graf nul. Graf complet. Graf regulat. Graf bipartit</a></li>
+		<li><a href="conexitate.html">Conexitate</a></li>
+		<li><a href="hl.html">Graf hamiltonian. Graf eulerian</a></li>
+		 <hr>
+      <li><a href="viata.html">Grafuri neorientate în viața reală</a></li>
+	   <hr>
+      <li><a href="pbr.html">Probleme rezolvate</a></li>
+	   <hr>
+      <li><a href="pbp.html">Probleme propuse</a></li>
+	   <hr>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    <h2>Grafuri neorientate în viața reală</h2>
+	
+	<p>Cablurile de înaltă tensiune care pornesc dintr-o centrală pot fi și ele reprezentate</p>
+	<p>cu ușurință cu ajutorul unui graf orientat, indicând și direcția de deplasare a curentului. </p>
+	<p>În acest caz centrala este un nod sursă. La fel se poate reprezenta și un sistem de canalizare,</p>
+	<p>de încălzire sau rețeaua de apă curentă. </p>
+
+<p> Multitudinea căilor aeriene reprezintă grafuri. Nodurile sunt intersecțiile (imaginare)</p>
+<p> și muchiile sunt rutele (imaginare). Noduri pot fi și aeroporturile.</p>
+	
+	<img src="_5501837.png" alt="Trulli" width="500" height="333">
+	
+	<p>Cel mai bun exemplu de aplicație practică în viață reală a grafurilor neorientate</p>
+	<p>sunt hărțile rutiere. Putem afla astfel cel mai scurt drum până într-un anumit punct</p>
+	<p>sau care puncte de pe hartă sunt cel mai ușor accesibile.</p>
+
+<p>Nodurile  pot fi considerate orașe, iar muchiile drumuri; grafurile orientate pot</p>
+<p> reprezenta drumuri cu sens unic între clădiri.  De asemenea, ne putem reprezenta</p>
+ <p>traiectoria unei călătorii cu ajutorul unui lanț al unui graf neorientat.</p>
+<p>Teoria grafurilor are numeroase apeluri în chimie, contribuind în mare măsură la </p>
+<p>rezolvarea problemelor de numărare a grafurilor aparținând unor clase speciale. Teoria grafurilor</p>
+ <p>este folosită în domenii variate: de la chimie la economie, de la studiul </p>
+<p> rețelelor electrice la critică textelor de politică, devenind o disciplină majoră.</p>
+	
+	<img src="_1922807.gif" alt="Trulli" width="500" height="333">
+	
+	<p>Grafurile mai pot arăta legăturile dintre anuminte grupuri sau oameni; grafuri orientate</p>
+	<p>pot arăta transferul de informații sau a unor bunuri.Un arbore genealogic este de </p>
+	<p>asemena un graf neorientat.</p>
+	
+	<img src="_1745019.jpg" alt="Trulli" width="500" height="333">
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

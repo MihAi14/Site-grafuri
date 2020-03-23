@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="istoric.html">Scurt Istoric</a></li>
+	  <hr>
+      <li><a href="teorie.html">Teorie</a></li>
+	   <hr>
+		<li><a href="terminologie.html">Terminologie</a></li>
+		<li><a href="grad.html">Gradul unui vârf</a></li>
+		<li><a href="reprezentare.html">Reprezentarea grafurilor neorientate</a></li>
+		<li><a href="partial.html">Graf parțial. Subgraf. Graf complementar</a></li>
+		<li><a href="complet.html">Graf nul. Graf complet. Graf regulat. Graf bipartit</a></li>
+		<li><a href="conexitate.html">Conexitate</a></li>
+		<li><a href="hl.html">Graf hamiltonian. Graf eulerian</a></li>
+		 <hr>
+      <li><a href="viata.html">Grafuri neorientate în viața reală</a></li>
+	   <hr>
+      <li><a href="pbr.html">Probleme rezolvate</a></li>
+	   <hr>
+      <li><a href="pbp.html">Probleme propuse</a></li>
+	   <hr>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    <h2>Probleme rezolvate</h2>
+	
+	<p><strong>Problema 1</strong></p>
+	<hr>
+	<p>Se dă un graf neorientat cu n (n<=100) vârfuri si m muchii prin lista muchiilor.</p>
+	<p>Afisați toate subgrafurile pe care le are. Fiecare subgraf va fi afișat astfel:</p>
+	<p>- vârfurile lui</p>
+	<p>- matricea de adiacență</p>
+	<p><a href="main1.cpp" target="_blank">Rezolvare</a></p>
+	
+	<hr>
+	
+	<p><strong>Problema 2</strong></p>
+	<hr>
+	<p>Se dau două grafuri neorientate G1 și G2 cu n (n<=100) vârfuri și m1, respectiv</p>
+	<p>m2 muchii prin listele muchiilor, în două fișiere graf1.in, respectiv graf2.in. </p>
+	<p>Verificați dacă unul dintre ele este graf parțial al celuilalt. Se va preciza dacă G1 este graf parțial</p>
+	<p> al lui G2, dacă G2 este graf parțial al lui G1 sau NU dacă niciunul dintre ele este graf parțial al celuilalt.</p>
+	<p><a href="main2.cpp" target="_blank">Rezolvare</a></p>
+	
+	<hr>
+	
+	<p><strong>Problema 3</strong></p>
+	<hr>
+	<p>Se dă un graf neorientat cu n (n<=100) vârfuri si m muchii prin lista muchiilor. Afisați toate grafurile parțiale pe care le are. Fiecare graf parțial va fi afișat astfel:</p>
+<p>- numărul lui de ordine (al câtelea a fost generat)</p>
+<p>- lista munchiilor lui</p>
+<p>- matricea de adiacență</p>
+	<p><a href="main3.cpp" target="_blank">Rezolvare</a></p>
+	
+	<hr>
+	
+	<p><strong>Problema 4</strong></p>
+	<hr>
+<p>Din fisierul graf.in se citesc de pe prima linie numerele naturale n si l (l,n<=20) reprezentand numarul de varfuri</p>
+<p> ale unui graf complet si respectiv lungimea unui ciclu.</p>
+<p>Afisati in fisierul graf.out, in ordine lexicografica, </p>
+<p>toate ciclurile elementare de lungime l ale grafului complet cu n varfuri.</p>
+	<p><a href="main4.cpp" target="_blank">Rezolvare</a></p>
+	
+	<hr>
+	
+	<p><strong>Problema 5</strong></p>
+	<hr>
+<p>Din fisierul graf.in se citesc de pe prima linie numerele naturale n si m (n<=20) reprezentand numarul</p>
+<p> de varfuri si respectiv numarul de muchii ale unui graf neorientat. De pe urmatoarele m linii se citesc muchiile</p>
+<p> grafului, iar de pe ultima linie se citesc 3 numere naturale x,y,l.</p>
+<p>Afisati in fisierul graf.out toate lanturile elementare de lungime l care </p>
+<p>au pe x ca extremitate initiala si pe y ca extremitate finala.</p>
+	<p><a href="main5.cpp" target="_blank">Rezolvare</a></p>
+	
+	
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

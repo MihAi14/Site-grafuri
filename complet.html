@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="istoric.html">Scurt Istoric</a></li>
+	  <hr>
+      <li><a href="teorie.html">Teorie</a></li>
+	   <hr>
+		<li><a href="terminologie.html">Terminologie</a></li>
+		<li><a href="grad.html">Gradul unui vârf</a></li>
+		<li><a href="reprezentare.html">Reprezentarea grafurilor neorientate</a></li>
+		<li><a href="partial.html">Graf parțial. Subgraf. Graf complementar</a></li>
+		<li><a href="complet.html">Graf nul. Graf complet. Graf regulat. Graf bipartit</a></li>
+		<li><a href="conexitate.html">Conexitate</a></li>
+		<li><a href="hl.html">Graf hamiltonian. Graf eulerian</a></li>
+		 <hr>
+      <li><a href="viata.html">Grafuri neorientate în viața reală</a></li>
+	   <hr>
+      <li><a href="pbr.html">Probleme rezolvate</a></li>
+	   <hr>
+      <li><a href="pbp.html">Probleme propuse</a></li>
+	   <hr>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    <h2>Graf nul. Graf complet. Graf regulat. Graf bipartit</h2>
+    <p>Grafurile au n<p><strong>Definiție:</strong> Un graf neorientat se numește <strong>graf nul</strong> dacă mulțimea muchiilor este vidă. </p>
+
+<p>Într-un graf nul toate vârfurile sunt izolate.</p>
+
+<p><strong>Definiție.</strong> Fie <code>G=(X, U)</code> un graf neorientat. Graful <code>G</code> se numește <strong>graf complet</strong> dacă oricare două vârfuri<br>
+distincte ale sale sunt adiacente. Un graf complet cu <code>n</code> vârfuri se notează <code>K</code><sub><code>n</code></sub>.</p>
+
+<p><strong>Exemplu:</strong> Graful următor este graful <code>K</code><sub><code>5</code></sub>.</p>
+
+<p><img alt="" height="181" src="graf-neorientat-complet.png" width="237"></p>
+
+<p>Într-un graf complet cu <code>n</code> vârfuri sunt <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-10-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msubsup&gt;&lt;mi&gt;C&lt;/mi&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msubsup&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mfrac&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2217;&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-193" style="width: 6.659em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.522em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(0.869em, 1005.52em, 2.708em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-194"><span class="msubsup" id="MathJax-Span-195"><span style="display: inline-block; position: relative; width: 1.247em; height: 0px;"><span style="position: absolute; clip: rect(3.141em, 1000.76em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-196" style="font-family: MathJax_Math-italic;">C<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.057em;"></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.358em, 1000.44em, 4.169em, -999.997em); top: -4.326em; left: 0.814em;"><span class="mn" id="MathJax-Span-197" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.52em, 1000.49em, 4.169em, -999.997em); top: -3.839em; left: 0.706em;"><span class="mi" id="MathJax-Span-198" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-199" style="font-family: MathJax_Main; padding-left: 0.273em;">=</span><span class="texatom" id="MathJax-Span-200" style="padding-left: 0.273em;"><span class="mrow" id="MathJax-Span-201"><span class="mfrac" id="MathJax-Span-202"><span style="display: inline-block; position: relative; width: 2.762em; height: 0px; margin-right: 0.111em; margin-left: 0.111em;"><span style="position: absolute; clip: rect(3.304em, 1002.6em, 4.332em, -999.997em); top: -4.597em; left: 50%; margin-left: -1.35em;"><span class="texatom" id="MathJax-Span-203"><span class="mrow" id="MathJax-Span-204"><span class="mi" id="MathJax-Span-205" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-206" style="font-size: 70.7%; font-family: MathJax_Main;">∗</span><span class="mo" id="MathJax-Span-207" style="font-size: 70.7%; font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-208" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-209" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mn" id="MathJax-Span-210" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-211" style="font-size: 70.7%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.358em, 1000.33em, 4.169em, -999.997em); top: -3.623em; left: 50%; margin-left: -0.16em;"><span class="mn" id="MathJax-Span-212" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(0.869em, 1002.76em, 1.247em, -999.997em); top: -1.296em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.762em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.085em;"></span></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.516em; border-left: 0px solid; width: 0px; height: 1.951em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msubsup><mi>C</mi><mi>n</mi><mn>2</mn></msubsup><mo>=</mo><mrow class="MJX-TeXAtom-ORD"><mfrac><mrow class="MJX-TeXAtom-ORD"><mi>n</mi><mo>∗</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow></math></span></span><script type="math/tex" id="MathJax-Element-10"> C_n ^2 = { {n*(n-1)} \over 2 } </script> muchii și fiecare vârf are gradul <code>n-1</code>.</p>
+
+<p><strong>Propoziție:</strong> Sunt <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-11-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mfrac&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2217;&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-213" style="width: 3.412em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.817em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(0.76em, 1002.82em, 2.33em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-214"><span class="msubsup" id="MathJax-Span-215"><span style="display: inline-block; position: relative; width: 2.817em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mn" id="MathJax-Span-216" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.435em; left: 0.49em;"><span class="texatom" id="MathJax-Span-217"><span class="mrow" id="MathJax-Span-218"><span class="mfrac" id="MathJax-Span-219"><span style="display: inline-block; position: relative; width: 2.005em; height: 0px; margin-right: 0.111em; margin-left: 0.111em;"><span style="position: absolute; clip: rect(3.466em, 1001.84em, 4.278em, -999.997em); top: -4.489em; left: 50%; margin-left: -0.917em;"><span class="texatom" id="MathJax-Span-220"><span class="mrow" id="MathJax-Span-221"><span class="mi" id="MathJax-Span-222" style="font-size: 50%; font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-223" style="font-size: 50%; font-family: MathJax_Main;">∗</span><span class="mo" id="MathJax-Span-224" style="font-size: 50%; font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-225" style="font-size: 50%; font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-226" style="font-size: 50%; font-family: MathJax_Main;">−</span><span class="mn" id="MathJax-Span-227" style="font-size: 50%; font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-228" style="font-size: 50%; font-family: MathJax_Main;">)</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.52em, 1000.22em, 4.169em, -999.997em); top: -3.677em; left: 50%; margin-left: -0.106em;"><span class="mn" id="MathJax-Span-229" style="font-size: 50%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(0.869em, 1002em, 1.247em, -999.997em); top: -1.242em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.005em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.085em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 1.627em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mrow class="MJX-TeXAtom-ORD"><mfrac><mrow class="MJX-TeXAtom-ORD"><mi>n</mi><mo>∗</mo><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></mfrac></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-11"> 2 ^ {{n*(n-1)} \over 2} </script> grafuri neorientate distincte cu <code>n</code> vârfuri.</p>
+
+<p><strong>Definiție:</strong> Un graf în care toate nodurile au acelaşi grad se numește <strong>graf regulat</strong>.</p>
+
+<p><strong>Exemplu:</strong> Graful de mai jos este regulat.</p>
+
+<p><img alt="" height="166" src="graf-regulat.png" width="248"></p>
+
+<p><strong>Definiţie:</strong> Un graf <code>G=(X, U)</code> se numește <strong>graf bipartit</strong> dacă există două mulţimi nevide <code>A</code> și <code>B</code> astfel încât <code>X=A ∪ B</code>, <code>A ∩ B = ∅</code> şi orice muchie <code>u</code> a lui <code>G</code> are o extremitate în <code>A</code> iar cealaltă în <code>B</code>. Mulţimile <code>A</code> şi <code>B</code> formează o partiţie a lui <code>X</code>.</p>
+
+<p><strong>Exemplu:</strong> Graful următor este bipartit. <code>A={1,2,5,7}</code> și <code>B={3,4,6}</code>.</p>
+
+<p><img alt="" height="139" src="graf-bipartit.png" width="312"></p>
+
+<p><strong>Definiție:</strong> Un graf bipartit <code>G=(X,U)</code> se numește <strong>bipartit complet</strong> dacă pentru oricare două vârfuri <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-12-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;&amp;#x2208;&lt;/mo&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-230" style="width: 3.087em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.546em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.301em, 1002.55em, 2.384em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-231"><span class="mi" id="MathJax-Span-232" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-233" style="font-family: MathJax_Main; padding-left: 0.273em;">∈</span><span class="mi" id="MathJax-Span-234" style="font-family: MathJax_Math-italic; padding-left: 0.273em;">A</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.127em; border-left: 0px solid; width: 0px; height: 1.042em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo>∈</mo><mi>A</mi></math></span></span><script type="math/tex" id="MathJax-Element-12"> x \in A</script> și <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-13-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo&gt;&amp;#x2208;&lt;/mo&gt;&lt;mi&gt;B&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-235" style="width: 3.033em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.492em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.301em, 1002.49em, 2.546em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-236"><span class="mi" id="MathJax-Span-237" style="font-family: MathJax_Math-italic;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-238" style="font-family: MathJax_Main; padding-left: 0.273em;">∈</span><span class="mi" id="MathJax-Span-239" style="font-family: MathJax_Math-italic; padding-left: 0.273em;">B</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.321em; border-left: 0px solid; width: 0px; height: 1.172em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>y</mi><mo>∈</mo><mi>B</mi></math></span></span><script type="math/tex" id="MathJax-Element-13"> y \in B </script>, există în graf muchia <code>[x,y]</code>; adică <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-14-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;y&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;mo&gt;&amp;#x2208;&lt;/mo&gt;&lt;mi&gt;U&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-240" style="width: 4.873em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.061em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.247em, 1004.06em, 2.6em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-241"><span class="mo" id="MathJax-Span-242" style="font-family: MathJax_Main;">[</span><span class="mi" id="MathJax-Span-243" style="font-family: MathJax_Math-italic;">x</span><span class="mo" id="MathJax-Span-244" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-245" style="font-family: MathJax_Math-italic; padding-left: 0.165em;">y<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-246" style="font-family: MathJax_Main;">]</span><span class="mo" id="MathJax-Span-247" style="font-family: MathJax_Main; padding-left: 0.273em;">∈</span><span class="mi" id="MathJax-Span-248" style="font-family: MathJax_Math-italic; padding-left: 0.273em;">U<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.111em;"></span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.386em; border-left: 0px solid; width: 0px; height: 1.302em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo stretchy="false">[</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">]</mo><mo>∈</mo><mi>U</mi></math></span></span><script type="math/tex" id="MathJax-Element-14"> [x,y] \in U </script>.</p>
+
+<p><strong>Exemplu:</strong> Graful următor este bipartit complet.</p>
+
+<p><img alt="" height="139" src="graf-bipartit-complet.png" width="312"></p>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="istoric.html">Scurt Istoric</a></li>
+	  <hr>
+      <li><a href="teorie.html">Teorie</a></li>
+	   <hr>
+		<li><a href="terminologie.html">Terminologie</a></li>
+		<li><a href="grad.html">Gradul unui vârf</a></li>
+		<li><a href="reprezentare.html">Reprezentarea grafurilor neorientate</a></li>
+		<li><a href="partial.html">Graf parțial. Subgraf. Graf complementar</a></li>
+		<li><a href="complet.html">Graf nul. Graf complet. Graf regulat. Graf bipartit</a></li>
+		<li><a href="conexitate.html">Conexitate</a></li>
+		<li><a href="hl.html">Graf hamiltonian. Graf eulerian</a></li>
+		 <hr>
+      <li><a href="viata.html">Grafuri neorientate în viața reală</a></li>
+	   <hr>
+      <li><a href="pbr.html">Probleme rezolvate</a></li>
+	   <hr>
+      <li><a href="pbp.html">Probleme propuse</a></li>
+	   <hr>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    <h2>Terminologie</h2>
+<p><strong>Definiție:</strong> Se numește <strong>graf neorientat</strong> o pereche ordonată de mulțimi <code>G=(X,U)</code>, unde:</p>
+
+<ul>
+	<li><code>X</code> este o mulțime finită și nevidă de elemente numite <strong>vârfuri</strong> sau <strong>noduri</strong>;</li>
+	<li><code>U</code> este o mulțime finită de submulțimi cu două elemente din <code>X</code>, numite <strong>muchii</strong>.</li>
+</ul>
+
+<p>Vom nota în continuare vârfurile cu valori între <code>1</code> și <code>n</code> – unde <code>n</code> este număru de vârfuri din graf, iar muchiile cu <code>[x,y]</code> sau <code>(x,y)</code>, unde <code>x</code> și <code>y</code> sunt vârfuri și se numesc <strong>extremitățile</strong> muchiei.</p>
+
+<p>Un <strong>vecin</strong> al unui vârf <code>x</code> este orice vârf <code>y</code> cu proprietatea că există muchia <code>[x,y]</code>.</p>
+
+<p>Două vârfuri între care există muchie se numesc <strong>adiacente</strong>.</p>
+
+<p>Două muchii sunt <strong>incidente</strong> dacă au o o extremitate comună. Un vârf este <strong>incident</strong> cu o muchie dacă vârful este extremitate a acelei muchii.</p>
+
+<p>Mulțimea muchiilor are proprietatea de simetrie: dacă <code>[x,y]</code> este muchie, atunci și <code>[y,x]</code> este muchie.</p>
+
+<p>Conform definiției:</p>
+
+<ul>
+	<li>într-un graf neorientat nu există muchie de la un vârf la el însuși;</li>
+	<li>intre două vârfuri distincte există cel mult o muchie.</li>
+</ul>
+
+<p><strong>Exemplu:</strong> Fie <code>G=(X,U)</code>, unde:</p>
+
+<ul>
+	<li><code>X={1,2,3,4,5,6,7,8,9,10,11}</code></li>
+	<li><code>U={[1,4],[1,5],[2,3],[2,8],[3,11],[4,5],[4,9],[7,10],[8,11]}</code></li>
+</ul>
+
+<p><img src="graf-neorientat.png" alt="Italian Trulli"></p>
+
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

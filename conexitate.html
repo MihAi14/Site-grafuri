@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="istoric.html">Scurt Istoric</a></li>
+	  <hr>
+      <li><a href="teorie.html">Teorie</a></li>
+	   <hr>
+		<li><a href="terminologie.html">Terminologie</a></li>
+		<li><a href="grad.html">Gradul unui vârf</a></li>
+		<li><a href="reprezentare.html">Reprezentarea grafurilor neorientate</a></li>
+		<li><a href="partial.html">Graf parțial. Subgraf. Graf complementar</a></li>
+		<li><a href="complet.html">Graf nul. Graf complet. Graf regulat. Graf bipartit</a></li>
+		<li><a href="conexitate.html">Conexitate</a></li>
+		<li><a href="hl.html">Graf hamiltonian. Graf eulerian</a></li>
+		 <hr>
+      <li><a href="viata.html">Grafuri neorientate în viața reală</a></li>
+	   <hr>
+      <li><a href="pbr.html">Probleme rezolvate</a></li>
+	   <hr>
+      <li><a href="pbp.html">Probleme propuse</a></li>
+	   <hr>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    <h2>Conexitate</h2>
+    <h3>Lanț, ciclu</h3>
+	<p><strong>Definiție:</strong> Se numește <strong>lanț</strong> o succesiune de vârfuri <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-15-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;L&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;[&lt;/mo&gt;&lt;mrow&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/msub&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mo&gt;&amp;#x22EF;&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mi&gt;k&lt;/mi&gt;&lt;/msub&gt;&lt;/mrow&gt;&lt;mo&gt;]&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-249" style="width: 9.31em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.741em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.247em, 1007.63em, 2.6em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-250"><span class="mi" id="MathJax-Span-251" style="font-family: MathJax_Math-italic;">L</span><span class="mo" id="MathJax-Span-252" style="font-family: MathJax_Main; padding-left: 0.273em;">=</span><span class="mrow" id="MathJax-Span-253" style="padding-left: 0.273em;"><span class="mo" id="MathJax-Span-254" style="font-family: MathJax_Main;">[</span><span class="mrow" id="MathJax-Span-255"><span class="msubsup" id="MathJax-Span-256"><span style="display: inline-block; position: relative; width: 0.977em; height: 0px;"><span style="position: absolute; clip: rect(3.412em, 1000.54em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-257" style="font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.598em;"><span class="mn" id="MathJax-Span-258" style="font-size: 70.7%; font-family: MathJax_Main;">1</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-259" style="font-family: MathJax_Main;">,</span><span class="msubsup" id="MathJax-Span-260" style="padding-left: 0.165em;"><span style="display: inline-block; position: relative; width: 0.977em; height: 0px;"><span style="position: absolute; clip: rect(3.412em, 1000.54em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-261" style="font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.598em;"><span class="mn" id="MathJax-Span-262" style="font-size: 70.7%; font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-263" style="font-family: MathJax_Main;">,</span><span class="mo" id="MathJax-Span-264" style="font-family: MathJax_Main; padding-left: 0.165em;">⋯</span><span class="msubsup" id="MathJax-Span-265" style="padding-left: 0.165em;"><span style="display: inline-block; position: relative; width: 1.031em; height: 0px;"><span style="position: absolute; clip: rect(3.412em, 1000.54em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-266" style="font-family: MathJax_Math-italic;">x</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.598em;"><span class="mi" id="MathJax-Span-267" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span></span><span class="mo" id="MathJax-Span-268" style="font-family: MathJax_Main;">]</span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.386em; border-left: 0px solid; width: 0px; height: 1.302em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>L</mi><mo>=</mo><mrow><mo>[</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mo>⋯</mo><msub><mi>x</mi><mi>k</mi></msub></mrow><mo>]</mo></mrow></math></span></span><script type="math/tex" id="MathJax-Element-15"> L = \left[ x_1, x_2, \cdots x_k \right] </script> cu proprietatea că oricare două vârfuri consecutive sunt adiacente.</p>
+
+<p>Vârfurile <code>x</code><sub><code>1</code></sub> şi <code>x</code><sub><code>k</code></sub> se numesc extremitățile lanțului. Numărul <code>k-1</code> se numește lungimea lanțului și este numărul de muchii din care este format.</p>
+
+<p>Lanțul care conține numai vârfuri distincte, două câte două, este lanț <strong>elementar</strong>.</p>
+
+<p>Lanțul care conține numai muchii distincte este <strong>lanț simplu</strong>. Dacă muchiile unui lanț nu sunt distincte se numește <strong>lanț compus</strong>.</p>
+
+<p><strong>Definiție:</strong> Se numește <strong>ciclu</strong> un lanț simplu în care primul vârf este identic cu ultimul. Dacă toate vârfurile sunt distincte, mai puțin primul și ultimul, se numește <strong>ciclu elementar</strong>.</p>
+
+<p><strong>Lungimea unui ciclu</strong> este egală cu numărul de muchii din ciclu. Lungimea minimă a unui ciclu este <code>3</code>.</p>
+
+<p>Un ciclu se numește <strong>par</strong> dacă lungimea sa este pară, respectiv <strong>impar</strong> în caz contrar.</p>
+
+<p>Un graf neorientat care nu conține niciun ciclu se numește <strong>aciclic</strong>.</p>
+
+<p><strong>Exemple:</strong> În graful de mai jos:</p>
+
+<p><img alt="" height="180" src="graf-neorientat-3.png" width="386"></p>
+
+<ul style="list-style-type:circle;">
+	<li>[2,4,1,3,5,7]  este un lanț elementar</li>
+	<li>[3,5,7,6,5,1]  este un lanț neelementar, dar simplu</li>
+	<li>[2,3,5,7,6,5,3,1] este un lanț compus</li>
+	<li>[1,5,3,2,4,1] este un ciclu elementar</li>
+	<li>[1,3,5,7,6,5,1]  este un ciclu neelementar</li>
+</ul>
+
+<h3>Graf conex. Componente conexe</h3>
+<p><strong>Definiție:</strong> Un graf neorientat se numește <strong>graf conex</strong> dacă pentru oricare două vârfuri <code>x</code> și <code>y</code> diferite ale sale, există cel puțin un lanț care le leagă, adică <code>x</code> este extremitatea inițială și <code>y</code> este extremitatea finală.</p>
+
+<p>Un graf cu un singur nod este, prin definiție, conex.</p>
+
+<p><strong>Definiție:</strong> Se numește <strong>componentă conexă</strong> a unui graf <code>G=(X,U)</code> un subgraf <code>H=(Y, V)</code>, conex, al lui <code>G</code><br>
+care are proprietatea că nu există nici un lanț în G care să lege un vârf din <code>Y</code> cu un vârf din <code>X – Y</code>. </p>
+
+<p>Subgraful <code>H</code> este conex și maximal cu această proprietate (dacă s-ar mai adăuga un vârf nu ar mai fi conex.)</p>
+
+<p>Un graf este conex dacă admite o singură componentă conexă.</p>
+
+<p><strong>Exemple:</strong></p>
+
+<p>Graful următor este conex:</p>
+
+<p><img alt="" height="180" src="graf-neorientat-3.png" width="386"></p>
+
+<p>Graful următor nu este conex și are <code>4</code> componente conexe.</p>
+
+<p><img alt="" height="239" src="graf-neorientat-0.png" width="496"></p>
+
+<p><strong>Definiție:</strong> Un graf este <strong>biconex</strong> dacă este conex şi pentru orice vârf eliminat subgraful generat îşi păstrează proprietatea de conexitate.</p>
+
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

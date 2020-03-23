@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="istoric.html">Scurt Istoric</a></li>
+	  <hr>
+      <li><a href="teorie.html">Teorie</a></li>
+	   <hr>
+		<li><a href="terminologie.html">Terminologie</a></li>
+		<li><a href="grad.html">Gradul unui vârf</a></li>
+		<li><a href="reprezentare.html">Reprezentarea grafurilor neorientate</a></li>
+		<li><a href="partial.html">Graf parțial. Subgraf. Graf complementar</a></li>
+		<li><a href="complet.html">Graf nul. Graf complet. Graf regulat. Graf bipartit</a></li>
+		<li><a href="conexitate.html">Conexitate</a></li>
+		<li><a href="hl.html">Graf hamiltonian. Graf eulerian</a></li>
+		 <hr>
+      <li><a href="viata.html">Grafuri neorientate în viața reală</a></li>
+	   <hr>
+      <li><a href="pbr.html">Probleme rezolvate</a></li>
+	   <hr>
+      <li><a href="pbp.html">Probleme propuse</a></li>
+	   <hr>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+  <p><strong>Definiție.</strong> Fie <code>G=(X, U)</code> un graf neorientat. Se numeşte <strong>graf parțial</strong> al grafului <code>G</code>, graful neorientat <code>G1=(X, U1)</code>, unde <code>U1 ⊆ U</code>.</p>
+
+<p>Din definiție rezultă: </p>
+
+<ul>
+	<li>Un graf parțial al unui graf neorientat <code>G=(V,U)</code>, are aceeaşi mulțime de vârfuri ca şi <code>G</code>, iar mulțimea muchiilor este o submulțime a lui <code>U</code> sau chiar <code>U</code>.</li>
+	<li>Fie <code>G=(X, U)</code> un graf neorientat. Un graf parțial al grafului <code>G</code> se obține păstrând vârfurile şi<br>
+eliminând eventual nişte muchii (se pot elimina şi toate muchiile sau chiar nici una).</li>
+</ul>
+
+<p><strong>Definiție.</strong> Fie <code>G=(X, U)</code> un graf orientat. Se numeşte <strong>subgraf</strong> al grafului <code>G</code> graful neorientat <code>G1=(X1,U1)</code> unde <code>X1 ⊆ X</code> iar <code>U1</code> conține toate arcele din <code>U</code> care au extremitățile în <code>X1</code>.</p>
+
+<p>Din definiție rezultă: </p>
+
+<ul>
+	<li>Fie <code>G=(X,U)</code> un graf orientat. Un subgraf al grafului <code>G</code>, se obține ştergând eventual anumite<br>
+vârfuri şi odată cu acestea şi muchiile care le admit ca extremitate (nu se pot şterge toate vârfurile deoarece s-ar obține un graf cu mulțimea vârfurilor vidă).</li>
+</ul>
+
+<p><strong>Definiție.</strong> Fie <code>G=(X, U)</code> un graf neorientat. Se numeşte <strong>graf complementar</strong> al grafului <code>G</code>, graful neorientat <code>G1=(X, U1)</code>, cu proprietatea că două vârfuri <code>x</code> și <code>y</code> sunt adiacente în <code>G1</code> dacă și numai dacă nu sunt adiacente în <code>G</code>.</p>
+
+<p><strong>Exemplu:</strong></p>
+
+<table class="table">
+		<tbody><tr>
+			<td class="col-md-3">Graful inițial </td>
+			<td class="col-md-3">Graf parțial </td>
+			<td class="col-md-3">Subgraf </td>
+			<td class="col-md-3">Graf complementar </td>
+		</tr>
+		<tr>
+			<td> <img alt="" height="239" src="graf-neorientat-2.png" width="252"> </td>
+			<td> <img alt="" height="239" src="graf-neorientat-2-graf-partial.png" width="252"> </td>
+			<td> <img alt="" height="159" src="graf-neorientat-2-subgraf.png" width="252"> </td>
+			<td> <img alt="" src="graf-neorientat-2-complementar.png"> </td>
+		</tr>
+		<tr>
+			<td> </td>
+			<td class="small">S-au eliminat muchiile <code>[1,2]</code>, <code>[3,1]</code> </td>
+			<td class="small">S-a eliminat vârfurile <code>3 5</code> și toate muchiile incidente cu ele. </td>
+			<td class="small">O muchie <code>[x,y]</code> apare în graful complementar dacă și numai dacă nu apare în graful inițial. </td>
+		</tr>
+</tbody></table>
+
+<p><strong>Observații.</strong> Un graf neorientat oarecare poate avea mai multe grafuri parțiale și subgrafuri, dar un unic graf complementar. Mai precis:</p>
+
+<p><strong>Teoremă:</strong> Fie <code>G</code> un graf neorientat cu <code>n</code> vârfuri și <code>m</code> muchii. Atunci:</p>
+
+<ul>
+	<li>graful <code>G</code> admite <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-159" style="width: 1.464em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.193em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.301em, 1001.19em, 2.33em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-160"><span class="msubsup" id="MathJax-Span-161"><span style="display: inline-block; position: relative; width: 1.193em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mn" id="MathJax-Span-162" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.49em;"><span class="mi" id="MathJax-Span-163" style="font-size: 70.7%; font-family: MathJax_Math-italic;">m</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 0.977em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mi>m</mi></msup></math></span></span><script type="math/tex" id="MathJax-Element-4"> 2 ^ m </script> grafuri parțiale;</li>
+	<li>graful <code>G</code> admite <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msup&gt;&lt;mo&gt;&amp;#x2013;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-164" style="width: 2.546em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.113em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.301em, 1002.06em, 2.33em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-165"><span class="msubsup" id="MathJax-Span-166"><span style="display: inline-block; position: relative; width: 0.977em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mn" id="MathJax-Span-167" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.49em;"><span class="mi" id="MathJax-Span-168" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-169" style="font-family: MathJax_Main;">–</span><span class="mn" id="MathJax-Span-170" style="font-family: MathJax_Main; padding-left: 0.165em;">1</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 0.977em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mi>n</mi></msup><mo>–</mo><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-5"> 2 ^ n – 1 </script> subgrafuri;</li>
+	<li>graful <code>G</code> admite un unic graf complementar.</li>
+</ul>
+
+<p>Justificare:</p>
+
+<p>Să ne amintim că o mulțime cu <code>a</code> elemente are <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;a&lt;/mi&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-171" style="width: 1.193em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.977em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.301em, 1000.98em, 2.33em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-172"><span class="msubsup" id="MathJax-Span-173"><span style="display: inline-block; position: relative; width: 0.977em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mn" id="MathJax-Span-174" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.49em;"><span class="mi" id="MathJax-Span-175" style="font-size: 70.7%; font-family: MathJax_Math-italic;">a</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 0.977em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mi>a</mi></msup></math></span></span><script type="math/tex" id="MathJax-Element-6"> 2 ^ a </script> submulțimi, inclusiv mulțimea vidă și mulțimea inițială. Atunci:</p>
+
+<ul>
+	<li>orice submulțime a mulțimii muchiilor induce un graf parțial. Sunt <code>m</code> muchii, deci <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-176" style="width: 1.464em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.193em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.301em, 1001.19em, 2.33em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-177"><span class="msubsup" id="MathJax-Span-178"><span style="display: inline-block; position: relative; width: 1.193em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mn" id="MathJax-Span-179" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.49em;"><span class="mi" id="MathJax-Span-180" style="font-size: 70.7%; font-family: MathJax_Math-italic;">m</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 0.977em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mi>m</mi></msup></math></span></span><script type="math/tex" id="MathJax-Element-7"> 2 ^ m </script> submulțimi, deci <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-8-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;m&lt;/mi&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-181" style="width: 1.464em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.193em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.301em, 1001.19em, 2.33em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-182"><span class="msubsup" id="MathJax-Span-183"><span style="display: inline-block; position: relative; width: 1.193em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mn" id="MathJax-Span-184" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.49em;"><span class="mi" id="MathJax-Span-185" style="font-size: 70.7%; font-family: MathJax_Math-italic;">m</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 0.977em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mi>m</mi></msup></math></span></span><script type="math/tex" id="MathJax-Element-8"> 2 ^ m </script> grafuri parțiale.</li>
+	<li>orice submulțime a mulțimii vârfuri induce un subgraf, mai puțin mulțimea vidă – un graf nu poate avea <code>0</code> vârfuri. Similar ca mai sus, sunt <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-9-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mi&gt;n&lt;/mi&gt;&lt;/msup&gt;&lt;mo&gt;&amp;#x2013;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-186" style="width: 2.546em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.113em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.301em, 1002.06em, 2.33em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-187"><span class="msubsup" id="MathJax-Span-188"><span style="display: inline-block; position: relative; width: 0.977em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mn" id="MathJax-Span-189" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.49em;"><span class="mi" id="MathJax-Span-190" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-191" style="font-family: MathJax_Main;">–</span><span class="mn" id="MathJax-Span-192" style="font-family: MathJax_Main; padding-left: 0.165em;">1</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 0.977em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mn>2</mn><mi>n</mi></msup><mo>–</mo><mn>1</mn></math></span></span><script type="math/tex" id="MathJax-Element-9"> 2^n – 1 </script> subgrafuri.</li>
+	<li>graful complementar este unic determinat, deoarece complementara unei submulțimi față de o mulțime dată este unic determinată.</li>
+</ul>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>

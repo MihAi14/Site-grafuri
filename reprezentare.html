@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Right column (page content) */
+.right {
+  flex: 65%;
+  padding: 15px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul id="myMenu">
+      <li><a href="istoric.html">Scurt Istoric</a></li>
+	  <hr>
+      <li><a href="teorie.html">Teorie</a></li>
+	   <hr>
+		<li><a href="terminologie.html">Terminologie</a></li>
+		<li><a href="grad.html">Gradul unui vârf</a></li>
+		<li><a href="reprezentare.html">Reprezentarea grafurilor neorientate</a></li>
+		<li><a href="partial.html">Graf parțial. Subgraf. Graf complementar</a></li>
+		<li><a href="complet.html">Graf nul. Graf complet. Graf regulat. Graf bipartit</a></li>
+		<li><a href="conexitate.html">Conexitate</a></li>
+		<li><a href="hl.html">Graf hamiltonian. Graf eulerian</a></li>
+		 <hr>
+      <li><a href="viata.html">Grafuri neorientate în viața reală</a></li>
+	   <hr>
+      <li><a href="pbr.html">Probleme rezolvate</a></li>
+	   <hr>
+      <li><a href="pbp.html">Probleme propuse</a></li>
+	   <hr>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#ddd;">
+    <h2>Reprezentarea grafurilor neorientate</h2>
+	<h3>Matricea de adiacență</h3>
+ <p>Pentru un graf neorientat <code>G=(X,U)</code> cu <code>n</code> vârfuri, matricea de adiacență este o matrice cu <code>n</code> linii și <code>n</code> coloane și elemente din <code>{0,1}</code>, cu: <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msub&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;/mrow&gt;&lt;/msub&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;{&lt;/mo&gt;&lt;mtable columnalign=&quot;left left&quot; rowspacing=&quot;4pt&quot; columnspacing=&quot;1em&quot;&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mstyle displaystyle=&quot;false&quot; scriptlevel=&quot;0&quot;&gt;&lt;mtext&gt;dac&amp;#x103;&amp;#xA0;&lt;/mtext&gt;&lt;/mstyle&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;mo&gt;&amp;#x2208;&lt;/mo&gt;&lt;mi&gt;U&lt;/mi&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mstyle displaystyle=&quot;false&quot; scriptlevel=&quot;0&quot;&gt;&lt;mtext&gt;dac&amp;#x103;&amp;#xA0;&lt;/mtext&gt;&lt;/mstyle&gt;&lt;mo stretchy=&quot;false&quot;&gt;[&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mo&gt;,&lt;/mo&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;]&lt;/mo&gt;&lt;mo&gt;&amp;#x2209;&lt;/mo&gt;&lt;mi&gt;U&lt;/mi&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo fence=&quot;true&quot; stretchy=&quot;true&quot; symmetric=&quot;true&quot;&gt;&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 13.639em; display: inline-block;"><span style="display: inline-block; position: relative; width: 11.366em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.68em, 1011.37em, 4.494em, -999.997em); top: -3.352em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="msubsup" id="MathJax-Span-3"><span style="display: inline-block; position: relative; width: 1.572em; height: 0px;"><span style="position: absolute; clip: rect(3.141em, 1000.71em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-4" style="font-family: MathJax_Math-italic;">A</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -3.839em; left: 0.76em;"><span class="texatom" id="MathJax-Span-5"><span class="mrow" id="MathJax-Span-6"><span class="mi" id="MathJax-Span-7" style="font-size: 70.7%; font-family: MathJax_Math-italic;">i</span><span class="mo" id="MathJax-Span-8" style="font-size: 70.7%; font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-9" style="font-size: 70.7%; font-family: MathJax_Math-italic;">j</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-10" style="font-family: MathJax_Main; padding-left: 0.273em;">=</span><span class="mrow" id="MathJax-Span-11" style="padding-left: 0.273em;"><span class="mo" id="MathJax-Span-12" style="vertical-align: 0em;"><span style="font-family: MathJax_Size3;">{</span></span><span class="mtable" id="MathJax-Span-13" style="padding-right: 0.165em; padding-left: 0.165em;"><span style="display: inline-block; position: relative; width: 7.416em; height: 0px;"><span style="position: absolute; clip: rect(2.492em, 1000.49em, 4.927em, -999.997em); top: -4.002em; left: 0em;"><span style="display: inline-block; position: relative; width: 0.49em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -4.705em; left: 0em;"><span class="mtd" id="MathJax-Span-14"><span class="mrow" id="MathJax-Span-15"><span class="mn" id="MathJax-Span-16" style="font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -3.244em; left: 0em;"><span class="mtd" id="MathJax-Span-29"><span class="mrow" id="MathJax-Span-30"><span class="mn" id="MathJax-Span-31" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(2.33em, 1005.9em, 5.143em, -999.997em); top: -4.002em; left: 1.518em;"><span style="display: inline-block; position: relative; width: 5.901em; height: 0px;"><span style="position: absolute; clip: rect(1.193em, 1005.9em, 2.6em, -999.997em); top: -2.865em; left: 0em;"><span class="mtd" id="MathJax-Span-17"><span class="mrow" id="MathJax-Span-18"><span class="mstyle" id="MathJax-Span-19"><span class="mrow" id="MathJax-Span-20"><span class="mtext" id="MathJax-Span-21" style="font-family: MathJax_Main;">dac<span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 83%; font-style: normal; font-weight: normal;">ă</span>&nbsp;</span></span></span><span class="mo" id="MathJax-Span-22" style="font-family: MathJax_Main;">[</span><span class="mi" id="MathJax-Span-23" style="font-family: MathJax_Math-italic;">i</span><span class="mo" id="MathJax-Span-24" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-25" style="font-family: MathJax_Math-italic; padding-left: 0.165em;">j</span><span class="mo" id="MathJax-Span-26" style="font-family: MathJax_Main;">]</span><span class="mo" id="MathJax-Span-27" style="font-family: MathJax_Main; padding-left: 0.273em;">∈</span><span class="mi" id="MathJax-Span-28" style="font-family: MathJax_Math-italic; padding-left: 0.273em;">U<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.111em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span><span style="position: absolute; clip: rect(1.193em, 1005.9em, 2.6em, -999.997em); top: -1.404em; left: 0em;"><span class="mtd" id="MathJax-Span-32"><span class="mrow" id="MathJax-Span-33"><span class="mstyle" id="MathJax-Span-34"><span class="mrow" id="MathJax-Span-35"><span class="mtext" id="MathJax-Span-36" style="font-family: MathJax_Main;">dac<span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 83%; font-style: normal; font-weight: normal;">ă</span>&nbsp;</span></span></span><span class="mo" id="MathJax-Span-37" style="font-family: MathJax_Main;">[</span><span class="mi" id="MathJax-Span-38" style="font-family: MathJax_Math-italic;">i</span><span class="mo" id="MathJax-Span-39" style="font-family: MathJax_Main;">,</span><span class="mi" id="MathJax-Span-40" style="font-family: MathJax_Math-italic; padding-left: 0.165em;">j</span><span class="mo" id="MathJax-Span-41" style="font-family: MathJax_Main;">]</span><span class="mo" id="MathJax-Span-42" style="font-family: MathJax_Main; padding-left: 0.273em;">∉</span><span class="mi" id="MathJax-Span-43" style="font-family: MathJax_Math-italic; padding-left: 0.273em;">U<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.111em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-44"></span></span></span><span style="display: inline-block; width: 0px; height: 3.358em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -1.231em; border-left: 0px solid; width: 0px; height: 3.12em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msub><mi>A</mi><mrow class="MJX-TeXAtom-ORD"><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo>{</mo><mtable columnalign="left left" rowspacing="4pt" columnspacing="1em"><mtr><mtd><mn>1</mn></mtd><mtd><mstyle displaystyle="false" scriptlevel="0"><mtext>dacă&nbsp;</mtext></mstyle><mo stretchy="false">[</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy="false">]</mo><mo>∈</mo><mi>U</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mstyle displaystyle="false" scriptlevel="0"><mtext>dacă&nbsp;</mtext></mstyle><mo stretchy="false">[</mo><mi>i</mi><mo>,</mo><mi>j</mi><mo stretchy="false">]</mo><mo>∉</mo><mi>U</mi></mtd></mtr></mtable><mo fence="true" stretchy="true" symmetric="true"></mo></mrow></math></span></span><script type="math/tex" id="MathJax-Element-1"> A_{i,j} = \left\{ \begin{array}{ll}
+ 1 & \mbox{dacă } [i,j] \in U \\
+ 0 & \mbox{dacă } [i,j] \notin U \end{array} \right. </script></p>
+
+<p><strong>Exemplu:</strong> Pentru graful neorientat de mai jos avem următoarea matrice de adiacență:</p>
+
+<table>
+		<tbody><tr>
+			<td> <img alt="" height="139" src="graf-neorientat-1.png" width="237"> </td>
+			<td> <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;A&lt;/mi&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow&gt;&lt;mo&gt;(&lt;/mo&gt;&lt;mtable columnalign=&quot;center center center center center&quot; rowspacing=&quot;4pt&quot; columnspacing=&quot;1em&quot;&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;mtr&gt;&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;/mtd&gt;&lt;mtd&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mtd&gt;&lt;/mtr&gt;&lt;/mtable&gt;&lt;mo&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-45" style="width: 12.827em; display: inline-block;"><span style="display: inline-block; position: relative; width: 10.663em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(2.005em, 1010.39em, 8.931em, -999.997em); top: -5.733em; left: 0em;"><span class="mrow" id="MathJax-Span-46"><span class="mi" id="MathJax-Span-47" style="font-family: MathJax_Math-italic;">A</span><span class="mo" id="MathJax-Span-48" style="font-family: MathJax_Main; padding-left: 0.273em;">=</span><span class="mrow" id="MathJax-Span-49" style="padding-left: 0.273em;"><span class="mo" id="MathJax-Span-50" style="vertical-align: 3.574em;"><span style="display: inline-block; position: relative; width: 0.869em; height: 0px;"><span style="position: absolute; font-family: MathJax_Size4; top: -2.865em; left: 0em;">⎛<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; font-family: MathJax_Size4; top: 1.951em; left: 0em;">⎝<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: -1.675em; left: 0em;">⎜<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: -1.188em; left: 0em;">⎜<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: -0.647em; left: 0em;">⎜<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: -0.16em; left: 0em;">⎜<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: 0.381em; left: 0em;">⎜<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: 0.869em; left: 0em;">⎜<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mtable" id="MathJax-Span-51" style="padding-right: 0.165em; padding-left: 0.165em;"><span style="display: inline-block; position: relative; width: 6.496em; height: 0px;"><span style="position: absolute; clip: rect(3.682em, 1000.49em, 10.284em, -999.997em); top: -7.248em; left: 0em;"><span style="display: inline-block; position: relative; width: 0.49em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -6.761em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-52"><span class="mrow" id="MathJax-Span-53"><span class="mn" id="MathJax-Span-54" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -5.354em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-67"><span class="mrow" id="MathJax-Span-68"><span class="mn" id="MathJax-Span-69" style="font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -3.948em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-82"><span class="mrow" id="MathJax-Span-83"><span class="mn" id="MathJax-Span-84" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -2.541em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-97"><span class="mrow" id="MathJax-Span-98"><span class="mn" id="MathJax-Span-99" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -1.134em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-112"><span class="mrow" id="MathJax-Span-113"><span class="mn" id="MathJax-Span-114" style="font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span><span style="display: inline-block; width: 0px; height: 7.254em;"></span></span><span style="position: absolute; clip: rect(3.682em, 1000.49em, 10.284em, -999.997em); top: -7.248em; left: 1.518em;"><span style="display: inline-block; position: relative; width: 0.49em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -6.761em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-55"><span class="mrow" id="MathJax-Span-56"><span class="mn" id="MathJax-Span-57" style="font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -5.354em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-70"><span class="mrow" id="MathJax-Span-71"><span class="mn" id="MathJax-Span-72" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -3.948em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-85"><span class="mrow" id="MathJax-Span-86"><span class="mn" id="MathJax-Span-87" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -2.541em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-100"><span class="mrow" id="MathJax-Span-101"><span class="mn" id="MathJax-Span-102" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -1.134em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-115"><span class="mrow" id="MathJax-Span-116"><span class="mn" id="MathJax-Span-117" style="font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span><span style="display: inline-block; width: 0px; height: 7.254em;"></span></span><span style="position: absolute; clip: rect(3.736em, 1000.49em, 10.338em, -999.997em); top: -7.302em; left: 2.979em;"><span style="display: inline-block; position: relative; width: 0.49em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -6.761em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-58"><span class="mrow" id="MathJax-Span-59"><span class="mn" id="MathJax-Span-60" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -5.354em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-73"><span class="mrow" id="MathJax-Span-74"><span class="mn" id="MathJax-Span-75" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -3.948em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-88"><span class="mrow" id="MathJax-Span-89"><span class="mn" id="MathJax-Span-90" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -2.541em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-103"><span class="mrow" id="MathJax-Span-104"><span class="mn" id="MathJax-Span-105" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -1.134em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-118"><span class="mrow" id="MathJax-Span-119"><span class="mn" id="MathJax-Span-120" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span><span style="display: inline-block; width: 0px; height: 7.308em;"></span></span><span style="position: absolute; clip: rect(3.682em, 1000.49em, 10.284em, -999.997em); top: -7.248em; left: 4.494em;"><span style="display: inline-block; position: relative; width: 0.49em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -6.761em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-61"><span class="mrow" id="MathJax-Span-62"><span class="mn" id="MathJax-Span-63" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -5.354em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-76"><span class="mrow" id="MathJax-Span-77"><span class="mn" id="MathJax-Span-78" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -3.948em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-91"><span class="mrow" id="MathJax-Span-92"><span class="mn" id="MathJax-Span-93" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -2.541em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-106"><span class="mrow" id="MathJax-Span-107"><span class="mn" id="MathJax-Span-108" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -1.134em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-121"><span class="mrow" id="MathJax-Span-122"><span class="mn" id="MathJax-Span-123" style="font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span><span style="display: inline-block; width: 0px; height: 7.254em;"></span></span><span style="position: absolute; clip: rect(3.736em, 1000.49em, 10.338em, -999.997em); top: -7.302em; left: 6.009em;"><span style="display: inline-block; position: relative; width: 0.49em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -6.761em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-64"><span class="mrow" id="MathJax-Span-65"><span class="mn" id="MathJax-Span-66" style="font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -5.354em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-79"><span class="mrow" id="MathJax-Span-80"><span class="mn" id="MathJax-Span-81" style="font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -3.948em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-94"><span class="mrow" id="MathJax-Span-95"><span class="mn" id="MathJax-Span-96" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -2.541em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-109"><span class="mrow" id="MathJax-Span-110"><span class="mn" id="MathJax-Span-111" style="font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; clip: rect(3.195em, 1000.49em, 4.169em, -999.997em); top: -1.134em; left: 50%; margin-left: -0.268em;"><span class="mtd" id="MathJax-Span-124"><span class="mrow" id="MathJax-Span-125"><span class="mn" id="MathJax-Span-126" style="font-family: MathJax_Main;">0</span></span></span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span><span style="display: inline-block; width: 0px; height: 7.308em;"></span></span></span></span><span class="mo" id="MathJax-Span-127" style="vertical-align: 3.574em;"><span style="display: inline-block; position: relative; width: 0.869em; height: 0px;"><span style="position: absolute; font-family: MathJax_Size4; top: -2.865em; left: 0em;">⎞<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; font-family: MathJax_Size4; top: 1.951em; left: 0em;">⎠<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: -1.675em; left: 0em;">⎟<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: -1.188em; left: 0em;">⎟<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: -0.647em; left: 0em;">⎟<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: -0.16em; left: 0em;">⎟<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: 0.381em; left: 0em;">⎟<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="font-family: MathJax_Size4; position: absolute; top: 0.869em; left: 0em;">⎟<span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 5.739em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -3.698em; border-left: 0px solid; width: 0px; height: 8.055em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><script type="math/tex" id="MathJax-Element-2">
+ </script> </td>
+		</tr>
+</tbody></table>
+
+<p><strong>Observații:</strong></p>
+
+<ul>
+	<li>matricea de adiacență este simetrică față de diagonala principală;</li>
+	<li>elementele de pe diagonala principală sunt <code>0</code>;</li>
+	<li>gradul unui vârf <code>x</code> este egal cu numărul de elemente <code>1</code> de pe linia (sau coloana) <code>x</code>;</li>
+	<li>suma tuturor elementelor din matricea de adiacență a unui graf neorientat este egală cu dublul numărului de muchii din graf.</li>
+</ul>
+
+<hr>
+ <h3>Lista de muchii</h3>
+ <p><img src="graf-neorientat-1.png" style="float:left; margin:5px 50px 5px 5px;"> Lista de muchii a unui graf neorientat reprezintă o mulțime ce conține toate muchiile din graf.</p>
+
+<p>Pentru graful alăturat, lista de muchii este: </p>
+
+<p>U={[1,2],[1,5],[2,5],[4,5]}</p>
+
+<p class="clear">Pentru reprezentarea în memorie putem folosi:</p>
+
+<ul>
+	<li>un tablou unidimensional cu elemente de tip <code>struct {int I,J;}</code></li>
+	<li>două tablouri unidimensionale cu elemente de tip <code>int</code></li>
+	<li>o listă alocată dinamic</li>
+	<li>etc.</li>
+</ul>
+
+<hr>
+ <h3>Lista de adiacență</h3>
+ <p><img src="graf-neorientat-1.png" style="float:left; margin:5px 50px 5px 5px;width:200px;"> Pentru un graf neorientat cu <code>G=(X,U)</code> se va memora numărul de vârfuri <code>n</code> și apoi, pentru fiecare vârf <code>x</code>, lista vârfurilor adiacente cu <code>x</code>, adică a vârfurilor <code>y</code> cu proprietatea că există muchia <code>[x,y]</code>.</p>
+
+<p>Pentru graful alăturat, listele de adiacență sunt: </p>
+<p><img src="adiacenta.png"></p>
+
+
+<p>La reprezentarea în memorie trebui avut în vedere că dimensiunile listelor de vecini sunt variabile. De aceea, este neeficientă utilizarea unor tablouri alocate static. Astfel, putem folosi:</p>
+
+<ul>
+	<li>un șir de <code>n</code> tablouri unidimensionale alocate dinamic;</li>
+	<li>un șir de <code>n</code> vectori din <span class="caps">STL</span>;</li>
+	<li>un șir de <code>n</code> liste simplu (dublu) înlănțuite alocate dinamic.</li>
+</ul>
+
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, ul, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myMenu");
+  li = ul.getElementsByTagName("li");
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+</body>
+</html>
